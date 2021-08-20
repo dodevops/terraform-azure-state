@@ -18,7 +18,8 @@ variable "resource_group" {
   description = "Name of the resource group to use"
 }
 
-variable "size" {
-  type        = string
-  description = "Size of state blob in bytes"
+variable "delete_retention_policy" {
+  type        = number
+  description = "Days until soft deleted resources are hard deleted"
+  default     = 7
 }

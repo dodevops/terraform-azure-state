@@ -36,7 +36,6 @@ No modules.
 The following resources are used by this module:
 
 - [azurerm_storage_account.storage-account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) (resource)
-- [azurerm_storage_blob.storage-blob](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob) (resource)
 - [azurerm_storage_container.storage-container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) (resource)
 
 ## Required Inputs
@@ -61,12 +60,6 @@ Description: Name of the resource group to use
 
 Type: `string`
 
-### size
-
-Description: Size of state blob in bytes
-
-Type: `string`
-
 ### stage
 
 Description: Name of the stage for this state
@@ -75,7 +68,15 @@ Type: `string`
 
 ## Optional Inputs
 
-No optional inputs.
+The following input variables are optional (have default values):
+
+### delete\_retention\_policy
+
+Description: days until soft deleted resources are hard deleted
+
+Type: `number`
+
+Default: `7`
 
 ## Outputs
 
