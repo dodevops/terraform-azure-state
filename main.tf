@@ -8,6 +8,7 @@ resource "azurerm_storage_account" "storage-account" {
   enable_https_traffic_only = true
   allow_blob_public_access  = false
   min_tls_version           = "TLS1_2"
+  tags                      = var.tags
 
   blob_properties {
     delete_retention_policy {

@@ -13,6 +13,12 @@ variable "location" {
   description = "The azure location used for azure"
 }
 
+variable "tags" {
+  type        = map(any)
+  description = "Map of tags for the resources"
+  default     = {}
+}
+
 variable "resource_group" {
   type        = string
   description = "Name of the resource group to use"
