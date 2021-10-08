@@ -72,11 +72,19 @@ The following input variables are optional (have default values):
 
 ### delete\_retention\_policy
 
-Description: days until soft deleted resources are hard deleted
+Description: Days until soft deleted resources are hard deleted
 
 Type: `number`
 
 Default: `7`
+
+### tags
+
+Description: Map of tags for the resources
+
+Type: `map(any)`
+
+Default: `{}`
 
 ## Outputs
 
