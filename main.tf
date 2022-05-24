@@ -10,6 +10,16 @@ resource "azurerm_storage_account" "storage-account" {
   min_tls_version                 = "TLS1_2"
   tags                            = var.tags
 
+  queue_properties {
+    logging {
+      delete                = true
+      read                  = true
+      write                 = true
+      version               = "2.0"
+      retention_policy_days = 14
+    }
+  }
+
   blob_properties {
     delete_retention_policy {
       days = var.delete_retention_policy
