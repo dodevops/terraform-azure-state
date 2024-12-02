@@ -5,7 +5,6 @@ resource "azurerm_storage_account" "storage-account" {
   account_kind               = "StorageV2"
   account_tier               = "Standard"
   account_replication_type   = "ZRS"
-  enable_https_traffic_only  = true
   https_traffic_only_enabled = true
   min_tls_version            = "TLS1_2"
   tags                       = var.tags

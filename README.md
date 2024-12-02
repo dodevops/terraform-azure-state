@@ -21,7 +21,7 @@ module "state" {
 
 The following requirements are needed by this module:
 
-- terraform (>=1.0.0)
+- terraform (>=1.9.0)
 
 - azurerm (>=4.0.0)
 
