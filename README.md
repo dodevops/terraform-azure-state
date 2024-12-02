@@ -19,13 +19,17 @@ module "state" {
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+The following requirements are needed by this module:
+
+- terraform (>=1.9.0)
+
+- azurerm (>=4.0.0)
 
 ## Providers
 
 The following providers are used by this module:
 
-- azurerm
+- azurerm (>=4.0.0)
 
 ## Modules
 
@@ -93,7 +97,6 @@ No outputs.
 
 ## Development
 
-Use [terraform-docs](https://terraform-docs.io/) to generate the API documentation by running
+Use [the terraform module tools](https://github.com/dodevops/terraform-module-tools) to check and generate the documentation by running
 
-    terraform fmt .
-    terraform-docs .
+    docker run -v "$PWD":/terraform ghcr.io/dodevops/terraform-module-tools:latest
